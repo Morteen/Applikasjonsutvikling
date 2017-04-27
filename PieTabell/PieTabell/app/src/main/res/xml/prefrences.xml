@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<CheckBoxPreference
+    android:key="hires"
+    android:title="HI-res_image"
+    android:summary="Show high res image"
+    android:defaultValue="false"/>
+
+    <SwitchPreference
+        android:key="pie"
+        android:title="Pie"
+        android:summary="Like Pie"
+        android:defaultValue="true"/>
+
+    <ListPreference
+        android:key="pie_type"
+        android:dependency="pie"
+        android:title="Pie type"
+        android:summary="Liker pie"
+        android:entries=""/>
+
+
+</PreferenceScreen>
