@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:padding="16dp"
+    android:layout_width="match_parent"   android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/labelBreddeView"
+        android:text="Breddegrad:"            android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_width="wrap_content"   android:layout_height="wrap_content"
+        android:layout_margin="10dp"          android:layout_alignParentLeft="true" />
+    <TextView
+        android:id="@+id/displayBreddeView"
+        android:hint="lat"    android:text=""  android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_toRightOf="@+id/labelBreddeView"
+        android:layout_width="match_parent"    android:layout_height="wrap_content"  />
+    <TextView
+        android:id="@+id/labelLengdeView"      android:layout_alignParentLeft="true"
+        android:text="Lengdegrad:"             android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_below="@+id/labelBreddeView"
+        android:layout_width="wrap_content"    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/displayLengdeView"    android:layout_below="@+id/displayBreddeView"
+        android:hint="long"    android:text="" android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_toRightOf="@+id/labelLengdeView"
+        android:layout_width="match_parent"    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/labelAccuracyView"    android:layout_below="@+id/labelLengdeView"
+        android:text="Nøyaktighet:"            android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/displayAccuracyView"  android:layout_below="@+id/displayLengdeView"
+        android:hint="long"    android:text="" android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_toRightOf="@+id/labelAccuracyView"
+        android:layout_width="match_parent"    android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/labelTimeView"        android:layout_below="@+id/labelAccuracyView"
+        android:text="Tidspunkt:"              android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"    android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/displayTimeView"      android:layout_below="@+id/displayAccuracyView"
+        android:hint="long"    android:text="" android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"           android:layout_toRightOf="@+id/labelTimeView"
+        android:layout_width="match_parent"    android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/kart_button"
+        android:text="Vis i kart"
+        android:onClick="visIKart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayTimeView"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Button
+        android:id="@+id/adresse_button"
+        android:text="Finn adresse"
+        android:onClick="finnAdresser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayTimeView"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/adresseHeadView"
+        android:text="Nærmeste adresse:"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kart_button"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/displayAdresseView"
+        android:text="---"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adresseHeadView"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerAdresser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/displayAdresseView" />
+
+
+</RelativeLayout>
